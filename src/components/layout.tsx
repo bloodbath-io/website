@@ -28,6 +28,11 @@ export default function Layout({ children, language, menu, home, banner }) {
                     Features
                   </Link>
                 </div>
+                {/* <div className="header__item">
+                  <Link className="header__link" to="#use-cases">
+                    Use cases
+                  </Link>
+                </div> */}
                 <div className="header__item">
                   <Link className="header__link" to="#pricing">
                     Pricing
@@ -36,6 +41,11 @@ export default function Layout({ children, language, menu, home, banner }) {
                 <div className="header__item">
                   <Link className="header__link" to="#about">
                     About
+                  </Link>
+                </div>
+                <div className="header__item">
+                  <Link className="header__link" target="_blank" to="https://docs.bloodbath.io">
+                    Docs
                   </Link>
                 </div>
                 <div className="header__item header__item--sign-in">
@@ -93,12 +103,12 @@ export default function Layout({ children, language, menu, home, banner }) {
             </div>
             <div className="col-xs-4">
               <div>
-                <a href="/">
+                <a href="/term-of-use">
                   Term of use
                 </a>
               </div>
               <div>
-                <a href="/fr">
+                <a href="/privacy-policy">
                   Privacy Policy
                 </a>
               </div>

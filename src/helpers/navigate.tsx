@@ -35,5 +35,5 @@ export const selectBigOffice = () => {
 }
 
 export const bottomSignUp = () => {
-  navigate(earlyAccessEndpoint)
+  navigate('https://app.bloodbath.io/signup')
 }

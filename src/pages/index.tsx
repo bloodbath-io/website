@@ -44,14 +44,14 @@ const allFeatures = [
 const allAbouts = [
   {
     title: 'The project',
-    description: "The world is changing and people relation with offices as well. Working partially from home, or going to the office once in a while. Softwares should evolve and be able to manage this advancedperly. Our goal is to be your office space management solution through our simplicity and flexibility.",
+    description: "The world is changing and there's an obvious technological need for precision. Our idea is simple, but very effective: removing the pain of scheduling & dispatching payloads in your stack. Our solution is and will always be simple and flexible.",
     image: {
       url: TheAdvancedjectImage
     }
   },
   {
     title: 'The company',
-    description: "Born in January 2021, it was founded by Laurent Schaffner and Jérémie Ges which are both engineers. It's still in closed beta and waiting for your feedbacks.",
+    description: "Born in June 2021, it was founded by Laurent Schaffner which's an experienced engineer. It's still in closed beta and waiting for your feedbacks.",
     image: {
       url: TheCompanyImage
     }
@@ -65,7 +65,7 @@ const allSubscriptions = [
     price: 'Free',
     cents: null,
     frequency: 'forever',
-    description: 'This is our most basic plan. It advancedvides unlimited spaces, analytics and integrations and a few available seats for small structures.',
+    description: 'This is our most basic plan. It provides unlimited spaces, analytics and integrations and a few available seats for small structures.',
     callToAction: 'Sign up for free now'
   },
   {
