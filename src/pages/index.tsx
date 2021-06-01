@@ -9,28 +9,34 @@ import DownImage from "../images/down.svg"
 import CheckImage from "../images/check.svg"
 import CheckHighlightImage from "../images/check-highlight.svg"
 
+import TheAdvancedjectImage from "../images/the-project.svg"
+import TheCompanyImage from "../images/the-company.svg"
+import AccessibilityImage from "../images/accessibility.svg"
+import ScalabilityImage from "../images/scalability.svg"
+import AnalyticsImage from "../images/analytics.svg"
+
 import Layout from "../components/layout"
 
 const allFeatures = [
   {
     title: 'Accessibility',
-    description: "Nothing to install, fast sign-up and super simple interface. You can setup your office space in a few clicks and let people book it by sending them your company link.",
+    description: "Nothing to install, fast sign-up and super simple interface. We have a coders first approach. You can access our APIs in a few clicks and start scheduling. We've also developped several libraries to make it even easier for you to integrate.",
     image: {
-      url: 'https://www.datocms-assets.com/40680/1611014939-accessibility.svg'
+      url: AccessibilityImage
+    }
+  },
+  {
+    title: 'Scalability',
+    description: "Our infrastructure is virtually unbreakable. You can scale up however you want, use the scheduler as intensively as you need to and we guarantee it won't break. We're very serious about SLOs.",
+    image: {
+      url: ScalabilityImage
     }
   },
   {
     title: 'Analytics',
-    description: "We digest data for you so you don't have to worry about space optimization. You'll know who's where at any moment and save real rental money by reading our analysis.",
+    description: "We digest data for you so you don't have to worry about this part. You'll understand the event flow straight away just by reading our analysis.",
     image: {
-      url: 'https://www.datocms-assets.com/40680/1610998688-analytics.svg'
-    }
-  },
-  {
-    title: 'Integrations',
-    description: "Each company has its stack. With us, no need to adapt. We integrate easily with several solutions such as Slack, Notion or Zapier to assimilate naturally to your ecosystem.",
-    image: {
-      url: 'https://www.datocms-assets.com/40680/1610998692-integrations.svg'
+      url: AnalyticsImage
     }
   },
 ]
@@ -38,33 +44,33 @@ const allFeatures = [
 const allAbouts = [
   {
     title: 'The project',
-    description: "The world is changing and people relation with offices as well. Working partially from home, or going to the office once in a while. Softwares should evolve and be able to manage this properly. Our goal is to be your office space management solution through our simplicity and flexibility.",
+    description: "The world is changing and people relation with offices as well. Working partially from home, or going to the office once in a while. Softwares should evolve and be able to manage this advancedperly. Our goal is to be your office space management solution through our simplicity and flexibility.",
     image: {
-      url: 'https://www.datocms-assets.com/40680/1610998696-the-project.svg'
+      url: TheAdvancedjectImage
     }
   },
   {
     title: 'The company',
     description: "Born in January 2021, it was founded by Laurent Schaffner and Jérémie Ges which are both engineers. It's still in closed beta and waiting for your feedbacks.",
     image: {
-      url: 'https://www.datocms-assets.com/40680/1610998694-the-company.svg'
+      url: TheCompanyImage
     }
   }
 ]
 
 const allSubscriptions = [
   {
-    slug: 'small_office',
-    title: 'Small Offcice',
+    slug: 'discovery',
+    title: 'Discovery',
     price: 'Free',
     cents: null,
     frequency: 'forever',
-    description: 'This is our most basic plan. It provides unlimited spaces, analytics and integrations and a few available seats for small structures.',
+    description: 'This is our most basic plan. It advancedvides unlimited spaces, analytics and integrations and a few available seats for small structures.',
     callToAction: 'Sign up for free now'
   },
   {
-    slug: 'growing_office',
-    title: 'Growing Offcice',
+    slug: 'advanced',
+    title: 'Advanced',
     price: '$19',
     cents: '.90',
     frequency: 'per month',
@@ -72,8 +78,8 @@ const allSubscriptions = [
     callToAction: 'Try for free'
   },
   {
-    slug: 'big_office',
-    title: 'Big Offcice',
+    slug: 'enterprise',
+    title: 'Enterprise',
     price: '$49',
     cents: '.90',
     frequency: 'per month',
@@ -83,20 +89,20 @@ const allSubscriptions = [
 ]
 
 const allSubscriptionAdvantages = [
-  { text: 'Unlimited spaces', slug: 'small_office'},
-  { text: 'Unlimited analytics', slug: 'small_office' },
-  { text: 'Unlimited integrations', slug: 'small_office' },
-  { text: 'Up to 10 seats available', slug: 'small_office' },
+  { text: 'Unlimited spaces', slug: 'discovery'},
+  { text: 'Unlimited analytics', slug: 'discovery' },
+  { text: 'Unlimited integrations', slug: 'discovery' },
+  { text: 'Up to 10 seats available', slug: 'discovery' },
   //
-  { text: 'Unlimited spaces', slug: 'growing_office'},
-  { text: 'Unlimited analytics', slug: 'growing_office' },
-  { text: 'Unlimited integrations', slug: 'growing_office' },
-  { text: 'Up to 50 seats available', slug: 'growing_office', highlight: true },
+  { text: 'Unlimited spaces', slug: 'advanced'},
+  { text: 'Unlimited analytics', slug: 'advanced' },
+  { text: 'Unlimited integrations', slug: 'advanced' },
+  { text: 'Up to 50 seats available', slug: 'advanced', highlight: true },
   //
-  { text: 'Unlimited spaces', slug: 'big_office'},
-  { text: 'Unlimited analytics', slug: 'big_office' },
-  { text: 'Unlimited integrations', slug: 'big_office' },
-  { text: 'Unlimited seats', slug: 'big_office', highlight: true }
+  { text: 'Unlimited spaces', slug: 'enterprise'},
+  { text: 'Unlimited analytics', slug: 'enterprise' },
+  { text: 'Unlimited integrations', slug: 'enterprise' },
+  { text: 'Unlimited seats', slug: 'enterprise', highlight: true }
 ]
 
 const featureBlock = (block, index) => {
@@ -195,14 +201,14 @@ const IndexPage = ({ data, pageContext }) => {
               <div className="row">
                 <div className="col-xs-12">
                   <h2 className="introduction__punchline">
-                  Office space made simple.
+                  Agnostic payload dispatch.
                   </h2>
                 </div>
               </div>
               <div className="row center-xs">
                 <div className="col-xs-10 col-md-6">
                   <div className="introduction__underline">
-                  Save time, optimize space and integrate easily with your company stack.
+                  Schedule events, optimize your architecture and integrate easily with your codebase stack.
                   </div>
                 </div>
               </div>
@@ -239,7 +245,7 @@ const IndexPage = ({ data, pageContext }) => {
               <div className="row">
                 <div className="col-xs-12">
                   <h2 className="features__punchline">
-                    It's that simple
+                    Made by developers, for developers
                   </h2>
                 </div>
               </div>
@@ -290,7 +296,7 @@ const IndexPage = ({ data, pageContext }) => {
                 </div>
               </div>
 
-              {/* Project list */}
+              {/* Advancedject list */}
               {allAbouts.map((node, index) => (
                 featureBlock(node, index)
               ))}

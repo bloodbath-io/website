@@ -5,12 +5,11 @@ import { Link } from "gatsby"
 import { goHome, signIn, bottomSignUp } from '../helpers/navigate'
 
 export default function Layout({ children, language, menu, home, banner }) {
-  debugger
   return (<main>
     <Helmet>
       <html lang={language} />
-      <title>Bloodbath - Office space made simple.</title>
-      <description>Save time, optimize space and integrate easily with your company stack.</description>
+      <title>Bloodbath - Agnostic payload dispatch.</title>
+      <description>Schedule events, optimize your architecture and integrate easily with your codebase stack.</description>
     </Helmet>
     <div className="wrapper">
       {/* Header */}
