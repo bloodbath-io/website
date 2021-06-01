@@ -82,7 +82,7 @@ export default function Layout({ children, language, menu, home, banner }) {
               <div className="row center-xs">
                 <div className="col-lg-4 col-md-6">
                   <div className="button button--white" onClick={bottomSignUp}>
-                    Sign up free now
+                    Sign up for free now
                   </div>
                 </div>
               </div>

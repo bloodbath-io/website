@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import { learnHow, signUp, goDown, selectSmallOffice, selectGrowingOffice, selectBigOffice} from '../helpers/navigate'
+import { learnHow, signUp, goDown, selectDiscovery, selectAdvanced, selectEnterprise} from '../helpers/navigate'
 import { isOdd } from '../helpers/numbers'
 
 import IntroductionImage from "../images/introduction.svg"
@@ -65,44 +65,47 @@ const allSubscriptions = [
     price: 'Free',
     cents: null,
     frequency: 'forever',
-    description: 'This is our most basic plan. It provides unlimited spaces, analytics and integrations and a few available seats for small structures.',
-    callToAction: 'Sign up for free now'
+    description: 'This is our most basic plan. It gives you 5,000 events to schedule and test our system out. All other functionalities are the same than the other plans.',
+    callToAction: 'Sign up for free now',
+    click: selectDiscovery
   },
   {
     slug: 'advanced',
     title: 'Advanced',
-    price: '$19',
-    cents: '.90',
-    frequency: 'per month',
-    description: 'If you’re a growing company and have too many employees for our free version, this one will fit you perfectly. You can try it out before taking a decision.',
-    callToAction: 'Try for free'
+    price: '$1',
+    cents: '.25',
+    frequency: 'per 1,000 events',
+    description: 'If you’re a growing company and have more serious loads to send, this one will fit you perfectly. You can try it out before taking a decision.',
+    callToAction: 'Try for free',
+    click: selectAdvanced
   },
   {
     slug: 'enterprise',
     title: 'Enterprise',
-    price: '$49',
-    cents: '.90',
-    frequency: 'per month',
-    description: 'You’re a bigger, more established company which needs an unlimited amount of seats? No worry, here’s the perfect fit for you.',
-    callToAction: 'Try for free'
+    price: '$?',
+    cents: '',
+    frequency: 'from 1,000,000 events',
+    description: 'You’re a bigger, more established company which needs to schedule a lot more events each month. No worry, we can discuss about custom prices.',
+    callToAction: 'Contact sales',
+    click: selectEnterprise
   },
 ]
 
 const allSubscriptionAdvantages = [
-  { text: 'Unlimited spaces', slug: 'discovery'},
+  { text: 'No throttling', slug: 'discovery'},
   { text: 'Unlimited analytics', slug: 'discovery' },
-  { text: 'Unlimited integrations', slug: 'discovery' },
-  { text: 'Up to 10 seats available', slug: 'discovery' },
+  { text: 'Unlimited support', slug: 'discovery' },
+  { text: 'Up to 5,000 events', slug: 'discovery' },
   //
-  { text: 'Unlimited spaces', slug: 'advanced'},
+  { text: 'No throttling', slug: 'advanced'},
   { text: 'Unlimited analytics', slug: 'advanced' },
-  { text: 'Unlimited integrations', slug: 'advanced' },
-  { text: 'Up to 50 seats available', slug: 'advanced', highlight: true },
+  { text: 'Unlimited support', slug: 'advanced' },
+  { text: 'Unlimited events', slug: 'advanced', highlight: true },
   //
-  { text: 'Unlimited spaces', slug: 'enterprise'},
+  { text: 'No throttling', slug: 'enterprise'},
   { text: 'Unlimited analytics', slug: 'enterprise' },
-  { text: 'Unlimited integrations', slug: 'enterprise' },
-  { text: 'Unlimited seats', slug: 'enterprise', highlight: true }
+  { text: 'Unlimited support', slug: 'enterprise' },
+  { text: 'Unlimited events', slug: 'enterprise', highlight: true }
 ]
 
 const featureBlock = (block, index) => {
@@ -139,7 +142,7 @@ const featureBlock = (block, index) => {
 
 const subscriptionBlock = (block, advantages, index) => {
 
-  const filteredAdvantages = advantages.filter((advantage) => (advantage.subscriptionSlug === block.slug) || (advantage.subscriptionSlug === ''))
+  const filteredAdvantages = advantages.filter((advantage) => (advantage.slug === block.slug) || (advantage.subscriptionSlug === ''))
 
   return (<div className="col-xs-12 col-sm-12 col-md-6 col-lg-4">
     <div className="pricing-block">
@@ -153,7 +156,7 @@ const subscriptionBlock = (block, advantages, index) => {
         {newAdvantagesList(filteredAdvantages)}
       </div>
       <div className="pricing-block__button">
-        <div className="button button--white" onClick={selectSmallOffice}>
+        <div className="button button--white" onClick={block.click}>
           {block.callToAction}
         </div>
       </div>
@@ -215,7 +218,7 @@ const IndexPage = ({ data, pageContext }) => {
               <div className="row center-xs">
                 <div className="introduction__buttons">
                   <button className="button" onClick={signUp}>
-                    Sign up free now
+                    Sign up for free now
                   </button>
                   <button className="button button--white-alt" onClick={learnHow}>
                     Learn how we do it
