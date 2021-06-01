@@ -9,8 +9,8 @@ export default function Layout({ children, language, menu, home, banner }) {
   return (<main>
     <Helmet>
       <html lang={language} />
-      <title>BigSeat - {home.punchline}</title>
-      <description>{home.underline}</description>
+      <title>Bloodbath - Office space made simple.</title>
+      <description>Save time, optimize space and integrate easily with your company stack.</description>
     </Helmet>
     <div className="wrapper">
       {/* Header */}
@@ -19,29 +19,29 @@ export default function Layout({ children, language, menu, home, banner }) {
           <div className="row middle-xs">
             <div className="col-lg col-md-4 col-xs-2">
               <h1 className="header__logo" onClick={goHome}>
-                BigSeat.
+                Bloodbath.
               </h1>
             </div>
             <div className="col-lg col-md-8 col-xs-10">
               <div className="header__items">
                 <div className="header__item">
                   <Link className="header__link" to="#features">
-                    {menu.features}
+                    Features
                   </Link>
                 </div>
                 <div className="header__item">
                   <Link className="header__link" to="#pricing">
-                    {menu.pricing}
+                    Pricing
                   </Link>
                 </div>
                 <div className="header__item">
                   <Link className="header__link" to="#about">
-                    {menu.about}
+                    About
                   </Link>
                 </div>
                 <div className="header__item header__item--sign-in">
                   <button className="button button--white-alt" onClick={signIn}>
-                    {menu.signIn} ->
+                    Sign in ->
                   </button>
                 </div>
               </div>
@@ -59,21 +59,21 @@ export default function Layout({ children, language, menu, home, banner }) {
               <div className="row">
                 <div className="col-xs-12">
                   <div className="banner__punchline">
-                    {banner.punchline}
+                    Get started now
                   </div>
                 </div>
               </div>
               <div className="row center-xs">
                 <div className="col-xs-12 col-sm-6">
                   <div className="banner__underline">
-                    {banner.underline}
+                    It takes less than 5 minutes to sign-up and start using our product.
                   </div>
                 </div>
               </div>
               <div className="row center-xs">
                 <div className="col-lg-4 col-md-6">
                   <div className="button button--white" onClick={bottomSignUp}>
-                    {banner.callToAction}
+                    Sign up free now
                   </div>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export default function Layout({ children, language, menu, home, banner }) {
           <div className="row middle-xs center-xs">
             <div className="col-xs-4">
               <h1 className="footer__logo">
-                BigSeat.
+                Bloodbath.
               </h1>
             </div>
             <div className="col-xs-4">
@@ -95,12 +95,12 @@ export default function Layout({ children, language, menu, home, banner }) {
             <div className="col-xs-4">
               <div>
                 <a href="/">
-                  <span className="footer__acronym">US</span> English
+                  Term of use
                 </a>
               </div>
               <div>
                 <a href="/fr">
-                  <span className="footer__acronym">FR</span> French
+                  Privacy Policy
                 </a>
               </div>
             </div>

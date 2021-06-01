@@ -1,17 +1,17 @@
 import { Link, navigate } from "gatsby"
 
-const earlyAccessEndpoint = 'https://j245chq3e8t.typeform.com/to/EvqyWIyL'
+const earlyAccessEndpoint = 'https://app.bloodbath.io'
 
 export const goHome = () => {
   navigate('/')
 }
 
 export const signIn = () => {
-  navigate(earlyAccessEndpoint)
+  navigate('https://app.bloodbath.io/signin')
 }
 
 export const signUp = () => {
-  navigate(earlyAccessEndpoint)
+  navigate('https://app.bloodbath.io/signup')
 }
 
 export const learnHow = () => {

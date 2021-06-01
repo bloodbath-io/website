@@ -4,21 +4,6 @@ import { navigate } from "gatsby"
 
 import NotFoundImage from "../images/not-found.svg"
 
-export const query = graphql`
-  query NotFoundQuery($language: DATOCMS_SiteLocale!) {
-    datocms {
-      banner(locale: $language) {
-        underline
-      }
-
-      notFound(locale: $language) {
-        title
-        text
-      }
-    }
-  }
-`
-
 const goHome = () => {
   navigate('/')
 }
@@ -29,8 +14,8 @@ const NotFoundPage = ({ data, pageContext }) => {
     <main>
       <Helmet>
         <html lang={pageContext.language} />
-        <title>BigSeat - {data.datocms.notFound.title}</title>
-        <description>{data.datocms.banner.underline}</description>
+        <title>Bloodbath - Page not found</title>
+        <description>It takes less than 5 minutes to sign-up and start using our product.</description>
       </Helmet>
       <div className="wrapper">
         {/* Header */}
@@ -39,7 +24,7 @@ const NotFoundPage = ({ data, pageContext }) => {
           <div className="row middle-xs">
             <div className="col-lg col-md-4 col-xs-2">
               <h1 className="header__logo" onClick={goHome}>
-                BigSeat.
+                Bloodbath.
               </h1>
             </div>
           </div>
@@ -48,14 +33,14 @@ const NotFoundPage = ({ data, pageContext }) => {
                 <div className="row">
                   <div className="col-xs-12">
                     <h2 className="introduction__punchline">
-                      {data.datocms.notFound.title}
+                      Page not found
                     </h2>
                   </div>
                 </div>
                 <div className="row center-xs">
                   <div className="col-xs-10 col-md-6">
                     <div className="introduction__underline">
-                      {data.datocms.notFound.text}
+                    Please go back to the home page.
                     </div>
                   </div>
                 </div>

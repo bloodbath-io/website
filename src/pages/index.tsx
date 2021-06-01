@@ -11,87 +11,93 @@ import CheckHighlightImage from "../images/check-highlight.svg"
 
 import Layout from "../components/layout"
 
-export const query = graphql`
-  query LandingQuery($language: DATOCMS_SiteLocale!) {
-    datocms {
-      menu(locale: $language) {
-        features
-        pricing
-        about
-        signIn
-      }
+const allFeatures = [
+  {
+    title: 'Accessibility',
+    description: "Nothing to install, fast sign-up and super simple interface. You can setup your office space in a few clicks and let people book it by sending them your company link.",
+    image: {
+      url: 'https://www.datocms-assets.com/40680/1611014939-accessibility.svg'
+    }
+  },
+  {
+    title: 'Analytics',
+    description: "We digest data for you so you don't have to worry about space optimization. You'll know who's where at any moment and save real rental money by reading our analysis.",
+    image: {
+      url: 'https://www.datocms-assets.com/40680/1610998688-analytics.svg'
+    }
+  },
+  {
+    title: 'Integrations',
+    description: "Each company has its stack. With us, no need to adapt. We integrate easily with several solutions such as Slack, Notion or Zapier to assimilate naturally to your ecosystem.",
+    image: {
+      url: 'https://www.datocms-assets.com/40680/1610998692-integrations.svg'
+    }
+  },
+]
 
-      banner(locale: $language) {
-        punchline
-        underline
-        callToAction
-      }
-
-      home(locale: $language) {
-        punchline
-        underline
-        callToAction
-        secondaryAction
-        pricingPunchline
-        featuresPunchline
-        aboutPunchline
-      }
-
-      allFeatures(locale: $language, orderBy: order_ASC) {
-        title
-        description
-        image {
-          url
-        }
-      }
-
-      allSubscriptions(locale: $language, orderBy: order_ASC) {
-        slug
-        title
-        price
-        cents
-        frequency
-        description
-        callToAction
-      }
-
-      allSubscriptionAdvantages(locale: $language, orderBy: order_ASC) {
-        subscriptionSlug
-        text
-        highlight
-      }
-
-      allAbouts(locale: $language, orderBy: order_ASC) {
-        title
-        description
-        image {
-          url
-        }
-      }
+const allAbouts = [
+  {
+    title: 'The project',
+    description: "The world is changing and people relation with offices as well. Working partially from home, or going to the office once in a while. Softwares should evolve and be able to manage this properly. Our goal is to be your office space management solution through our simplicity and flexibility.",
+    image: {
+      url: 'https://www.datocms-assets.com/40680/1610998696-the-project.svg'
+    }
+  },
+  {
+    title: 'The company',
+    description: "Born in January 2021, it was founded by Laurent Schaffner and Jérémie Ges which are both engineers. It's still in closed beta and waiting for your feedbacks.",
+    image: {
+      url: 'https://www.datocms-assets.com/40680/1610998694-the-company.svg'
     }
   }
-`
+]
 
-const plansAdvantages = {
-  smallOffice: [
-    { text: 'Unlimited spaces'},
-    { text: 'Unlimited analytics' },
-    { text: 'Unlimited integrations' },
-    { text: 'Up to 10 seats available' }
-  ],
-  growingOffice: [
-    { text: 'Unlimited spaces'},
-    { text: 'Unlimited analytics' },
-    { text: 'Unlimited integrations' },
-    { text: 'Up to 50 seats available', highlight: true }
-  ],
-  bigOffice: [
-    { text: 'Unlimited spaces'},
-    { text: 'Unlimited analytics' },
-    { text: 'Unlimited integrations' },
-    { text: 'Unlimited seats', highlight: true }
-  ]
-}
+const allSubscriptions = [
+  {
+    slug: 'small_office',
+    title: 'Small Offcice',
+    price: 'Free',
+    cents: null,
+    frequency: 'forever',
+    description: 'This is our most basic plan. It provides unlimited spaces, analytics and integrations and a few available seats for small structures.',
+    callToAction: 'Sign up for free now'
+  },
+  {
+    slug: 'growing_office',
+    title: 'Growing Offcice',
+    price: '$19',
+    cents: '.90',
+    frequency: 'per month',
+    description: 'If you’re a growing company and have too many employees for our free version, this one will fit you perfectly. You can try it out before taking a decision.',
+    callToAction: 'Try for free'
+  },
+  {
+    slug: 'big_office',
+    title: 'Big Offcice',
+    price: '$49',
+    cents: '.90',
+    frequency: 'per month',
+    description: 'You’re a bigger, more established company which needs an unlimited amount of seats? No worry, here’s the perfect fit for you.',
+    callToAction: 'Try for free'
+  },
+]
+
+const allSubscriptionAdvantages = [
+  { text: 'Unlimited spaces', slug: 'small_office'},
+  { text: 'Unlimited analytics', slug: 'small_office' },
+  { text: 'Unlimited integrations', slug: 'small_office' },
+  { text: 'Up to 10 seats available', slug: 'small_office' },
+  //
+  { text: 'Unlimited spaces', slug: 'growing_office'},
+  { text: 'Unlimited analytics', slug: 'growing_office' },
+  { text: 'Unlimited integrations', slug: 'growing_office' },
+  { text: 'Up to 50 seats available', slug: 'growing_office', highlight: true },
+  //
+  { text: 'Unlimited spaces', slug: 'big_office'},
+  { text: 'Unlimited analytics', slug: 'big_office' },
+  { text: 'Unlimited integrations', slug: 'big_office' },
+  { text: 'Unlimited seats', slug: 'big_office', highlight: true }
+]
 
 const featureBlock = (block, index) => {
   if (isOdd(index)) {
@@ -182,31 +188,31 @@ const advantagesList = (plan: Array<{ highlight?: boolean, text: string}>) => {
 const IndexPage = ({ data, pageContext }) => {
   return (
     <main>
-      <Layout language={pageContext.language} menu={data.datocms.menu} home={data.datocms.home} banner={data.datocms.banner}>
+      <Layout language={pageContext.language}>
         <div className="container-fluid">
           <div className="row introduction">
             <div className="col-xs-12">
               <div className="row">
                 <div className="col-xs-12">
                   <h2 className="introduction__punchline">
-                    {data.datocms.home.punchline}
+                  Office space made simple.
                   </h2>
                 </div>
               </div>
               <div className="row center-xs">
                 <div className="col-xs-10 col-md-6">
                   <div className="introduction__underline">
-                    {data.datocms.home.underline}
+                  Save time, optimize space and integrate easily with your company stack.
                   </div>
                 </div>
               </div>
               <div className="row center-xs">
                 <div className="introduction__buttons">
                   <button className="button" onClick={signUp}>
-                    {data.datocms.home.callToAction}
+                    Sign up free now
                   </button>
                   <button className="button button--white-alt" onClick={learnHow}>
-                    {data.datocms.home.secondaryAction}
+                    Learn how we do it
                   </button>
                 </div>
               </div>
@@ -233,13 +239,13 @@ const IndexPage = ({ data, pageContext }) => {
               <div className="row">
                 <div className="col-xs-12">
                   <h2 className="features__punchline">
-                    {data.datocms.home.featuresPunchline}
+                    It's that simple
                   </h2>
                 </div>
               </div>
 
               {/* Features list */}
-              {data.datocms.allFeatures.map((node, index) => (
+              {allFeatures.map((node, index) => (
                 featureBlock(node, index)
               ))}
 
@@ -253,7 +259,7 @@ const IndexPage = ({ data, pageContext }) => {
               <div className="row">
                 <div className="col-xs-12">
                   <h2 className="pricing__punchline">
-                    {data.datocms.home.pricingPunchline}
+                  A plan for each size
                   </h2>
                 </div>
               </div>
@@ -262,8 +268,8 @@ const IndexPage = ({ data, pageContext }) => {
                   <div className="row center-xs">
 
                     {/* Subscriptions */}
-                    {data.datocms.allSubscriptions.map((node, index) => (
-                      subscriptionBlock(node, data.datocms.allSubscriptionAdvantages, index)
+                    {allSubscriptions.map((node, index) => (
+                      subscriptionBlock(node, allSubscriptionAdvantages, index)
                     ))}
 
                   </div>
@@ -279,13 +285,13 @@ const IndexPage = ({ data, pageContext }) => {
               <div className="row">
                 <div className="col-xs-12">
                   <h2 className="features__punchline">
-                    {data.datocms.home.aboutPunchline}
+                    About
                   </h2>
                 </div>
               </div>
 
               {/* Project list */}
-              {data.datocms.allAbouts.map((node, index) => (
+              {allAbouts.map((node, index) => (
                 featureBlock(node, index)
               ))}
 

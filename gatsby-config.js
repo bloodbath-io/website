@@ -7,23 +7,10 @@ module.exports = {
         {
           resolve: `gatsby-plugin-manifest`,
           options: {
-            name: "BigSeat",
-            short_name: "BigSeat",
+            name: "Bloodbath",
+            short_name: "Bloodbath",
             start_url: "/",
             icon: "src/images/icon.png",
-          },
-        },
-        {
-          resolve: "gatsby-source-graphql",
-          options: {
-            typeName: "DATOCMS",
-            fieldName: "datocms",
-            url: "https://graphql.datocms.com/",
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json',
-              'Authorization': `Bearer ${DATOCMS_READ_TOKEN}`,
-            },
           },
         },
         {
