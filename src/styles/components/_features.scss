@@ -1,0 +1,52 @@
+.features {}
+
+.features__punchline {
+  margin-top: 0.5em;
+  font-size: 60px;
+  letter-spacing: $letter-spacing-x-small;
+  font-weight: 800;
+  color: $color-black;
+  text-align: center;
+  line-height: 1;
+
+  @include breakpoint("xs") {
+    font-size: 30px;
+  }
+}
+
+.features-block {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.features-block__title {
+  font-weight: 800;
+  font-size: 22px;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  text-align: left;
+
+  @include breakpoint("xs") {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.features-block__text {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  color: $color-gray-500;
+
+  @include breakpoint("xs") {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.features-block__image {
+  @include breakpoint("xs") {
+    max-width: 70%;
+    margin: auto;
+  }
+}

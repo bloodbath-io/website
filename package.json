@@ -1,0 +1,34 @@
+{
+  "name": "big-seat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BigSeat",
+  "author": "Laurent Schaffner",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "browser-lang": "^0.1.0",
+    "flexboxgrid": "^6.3.1",
+    "gatsby": "^2.26.1",
+    "gatsby-plugin-google-gtag": "^2.7.0",
+    "gatsby-plugin-hotjar": "^1.1.1",
+    "gatsby-plugin-intl": "^0.3.3",
+    "gatsby-plugin-manifest": "^2.10.0",
+    "gatsby-plugin-react-helmet": "^3.8.0",
+    "gatsby-plugin-sass": "^3.0.0",
+    "gatsby-source-graphql": "^2.12.0",
+    "gsap": "^3.6.0",
+    "node-sass": "^5.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0"
+  }
+}

@@ -1,0 +1,20 @@
+.footer {
+  background-color: $color-ternary;
+  color: $color-white;
+  a {
+    color: $color-white;
+  }
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.footer__logo {
+  font-size: 28px;
+  letter-spacing: -0.9px;
+  font-weight: 800;
+  color: $color-white;
+}
+
+.footer__acronym {
+  font-weight: 600;
+}

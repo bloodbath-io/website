@@ -1,0 +1,10 @@
+@import "../../node_modules/flexboxgrid/css/flexboxgrid.min.css";
+
+/**
+ * Flexbox grid overrides
+ */
+
+.container-fluid {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}

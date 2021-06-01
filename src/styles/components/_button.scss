@@ -1,0 +1,71 @@
+.button {
+  @include button-reset;
+  background-color: $color-primary;
+  color: $color-white;
+  font-weight: 500;
+  padding: 1.5em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  border-radius: 5px;
+  cursor: pointer;
+
+  .introduction__buttons & {
+    @include breakpoint('xs') {
+      padding-right: 1em;
+      padding-left: 1em;
+      font-size: 14px;
+    }
+
+    @include breakpoint('xxs') {
+      font-size: 12px;
+    }
+  }
+
+  & + & {
+    margin-left: 15px;
+
+    @include breakpoint('xxs') {
+      margin-left: 10px;
+    }
+  }
+}
+
+.button--white {
+  background-color: $color-white;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+}
+
+.button--white-alt {
+  background: white;
+  color: $color-gray-500;
+  border: 1px solid $color-gray-300;
+
+  .header__item & {
+    padding: ($spacing-unit * 2) ($spacing-unit * 4);
+  }
+}
+
+.button--text {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: transparent;
+  color: $color-black;
+
+  @include breakpoint("sm") {
+    margin-top: 1em;
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    right: 15%;
+    bottom: 0;
+    left: 15%;
+    content: '';
+    height: 3px;
+    background-color: $color-primary;
+  }
+}

@@ -1,0 +1,166 @@
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == xxs {
+    @media (max-width: $breakpoint-xxs) {
+      @content;
+    }
+  } @else if $breakpoint == xs {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: xxs, xs, sm, md, lg, xl";
+  }
+}
+
+@mixin button-reset {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    overflow: visible;
+    user-select: none;
+}
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: $color;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $color;
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: $color;
+  }
+}
+
+@mixin bottom-radius($percent) {
+  // border-radius: 0% 100% 10% 90% / 75% 0% 100% 25%;
+  border-bottom-left-radius: $percent;
+  border-bottom-right-radius: $percent;
+}
+
+@mixin top-radius($percent) {
+  border-top-left-radius: $percent;
+  border-top-right-radius: $percent;
+}
+
+@mixin background-absolute() {
+  position: absolute;
+  width: 100vw;
+}
+
+@mixin no-max-width() {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+@mixin default-list() {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+@mixin absolute-center() {
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+@mixin extend-clickable($width: 2em, $height: 2em) {
+  padding-top: $height;
+  padding-bottom: $height;
+  padding-left: $width;
+  padding-right: $width;
+  margin-top: -$height;
+  margin-bottom: -$height;
+  margin-left: -$width;
+  margin-right: -$width;
+  display: inline-block;
+}
+
+@mixin button-radius($size: medium) {
+  @if $size == big {
+    border-radius: $big-radius;
+  } @else if $size == medium {
+    border-radius: $medium-radius;
+  } @else if $size == small {
+    border-radius: $small-radius;
+  }
+}
+
+@mixin header-background($height) {
+  @include background-absolute();
+  @include bottom-radius(12%);
+  z-index: -1;
+  background: $background-header-alt-color url("/landing-header/background.svg") no-repeat fixed center;
+  //  overflow: hidden;
+  background-size: cover;
+  padding-bottom: spacing($height);
+
+  @include breakpoint("md") {
+    @include bottom-radius(20%);
+    padding-bottom: spacing($height * 0.9);
+  }
+
+  @include breakpoint("sm") {
+    @include bottom-radius(20%);
+    padding-bottom: spacing($height * 0.9);
+  }
+
+  @include breakpoint("xs") {
+    @include bottom-radius(5%);
+  }
+}
+
+@mixin triangle-right($border, $background) {
+  border-style: solid;
+  border-width: 10px 2px 10px 15px;
+  border-color: transparent transparent transparent $border;
+  &:after {
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 2px 10px 15px;
+    border-color: transparent transparent transparent $background;
+    content: "";
+  }
+}
+
+@mixin triangle-left($border, $background) {
+  border-style: solid;
+  border-width: 10px 15px 10px 2px;
+  border-color: transparent $border transparent transparent;
+  &:after {
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 15px 10px 2px;
+    border-color: transparent $background transparent transparent;
+    content: "";
+  }
+}

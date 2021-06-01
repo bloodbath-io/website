@@ -1,0 +1,125 @@
+.pricing {
+  margin-top: 2em;
+}
+
+.pricing__punchline {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  font-size: 60px;
+  letter-spacing: $letter-spacing-x-small;
+  font-weight: 800;
+  color: $color-black;
+  text-align: center;
+  line-height: 1;
+
+  @include breakpoint("xs") {
+    font-size: 30px;
+  }
+}
+
+.pricing-block {
+  margin-bottom: 5em;
+  padding: 4em;
+  border: 1px solid $color-gray-300;
+  border-radius: $small-radius;
+  background: $color-white;
+  text-align: left;
+
+  @include breakpoint("xs") {
+    padding: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  @include breakpoint("md") {
+    padding: 2em;
+    margin-bottom: 2em;
+  }
+
+  @include breakpoint("lg") {
+    padding: 2em;
+  }
+
+  @include breakpoint("xl") {
+    padding: 4em;
+  }
+}
+
+.pricing-block__title {
+  color: $color-primary;
+  font-weight: 700;
+  font-size: 25px;
+
+  @include breakpoint("sm") {
+    font-size: 22px;
+  }
+}
+
+.pricing-block__price {
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 0.4em;
+  line-height: 1;
+  letter-spacing: $letter-spacing-x-small;
+
+  @include breakpoint("sm") {
+    font-size: 30px;
+  }
+}
+
+.pricing-block__price--cents {
+  font-size: 30px;
+
+  @include breakpoint("sm") {
+    font-size: 20px;
+  }
+}
+
+.pricing-block__price-frequency {
+  font-size: 18px;
+  font-weight: 700;
+
+  @include breakpoint("sm") {
+    font-size: 16px;
+  }
+}
+
+.pricing-block__description {
+  margin-top: 2em;
+  padding-bottom: 2em;
+  min-height: 170px;
+  text-align: left;
+
+  @include breakpoint("sm") {
+    min-height: auto;
+  }
+}
+
+.pricing-block__checklist {
+  line-height: 1.75;
+}
+
+  .pricing-block__check {
+    vertical-align: middle;
+  }
+
+  .pricing-block__check--highlight {
+    color: $color-primary;
+    font-weight: 500;
+  }
+
+  .pricing-block__check-icon {
+    display: inline-block;
+
+    img {
+      width: 12px;
+      margin-right: $spacing-unit * 2;
+    }
+  }
+
+  .pricing-block__check-label {}
+
+.pricing-block__button {
+  margin-top: 2em;
+  text-align: center;
+}

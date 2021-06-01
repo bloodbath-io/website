@@ -1,0 +1,41 @@
+.header {
+  max-width: $breakpoint-lg;
+  margin: 0 auto;
+  margin-top: $spacing-unit * 4;
+}
+
+  .header__logo {
+    font-size: 28px;
+    letter-spacing: -0.9px;
+    font-weight: 800;
+    color: $color-black;
+    cursor: pointer;
+  }
+
+  .header__items {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+
+    .header__item {
+      flex: 1;
+      text-align: center;
+
+      @include breakpoint('sm') {
+        display: none;
+      }
+    }
+
+    .header__item--sign-in {
+      @include breakpoint('sm') {
+        display: block;
+        text-align: right;
+      }
+    }
+
+      .header__menu-link {
+        &:hover {
+          border-bottom: 3px solid $color-primary;
+        }
+      }
