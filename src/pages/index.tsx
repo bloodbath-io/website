@@ -23,7 +23,7 @@ import Layout from "../components/layout"
 const allFeatures = [
   {
     title: 'Accessibility',
-    description: "Nothing to install, fast sign-up and super simple interface. We have a coders first approach. You can access our APIs in a few clicks and start scheduling. We've also developped several libraries to make it even easier for you to integrate.",
+    description: "Nothing to install, fast sign-up and super simple interface. We have a coders first approach. You can access our APIs in a few clicks and start scheduling. We've also developed several libraries to make it even easier for you to integrate.",
     image: {
       url: AccessibilityImage
     },
