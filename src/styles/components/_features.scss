@@ -44,6 +44,14 @@
   }
 }
 
+.features-block__buttons {
+  margin-top: 1em;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  color: $color-gray-500;
+}
+
 .features-block__image {
   @include breakpoint("xs") {
     max-width: 70%;

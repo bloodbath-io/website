@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import { learnHow, signUp, goDown, selectDiscovery, selectAdvanced, selectEnterprise} from '../helpers/navigate'
 import { isOdd } from '../helpers/numbers'
+import { navigate } from "gatsby"
 
 import IntroductionImage from "../images/introduction.svg"
 import DownImage from "../images/down.svg"
@@ -15,6 +16,8 @@ import AccessibilityImage from "../images/accessibility.svg"
 import ScalabilityImage from "../images/scalability.svg"
 import AnalyticsImage from "../images/analytics.svg"
 
+import RubyImage from "../images/ruby.png"
+
 import Layout from "../components/layout"
 
 const allFeatures = [
@@ -23,21 +26,29 @@ const allFeatures = [
     description: "Nothing to install, fast sign-up and super simple interface. We have a coders first approach. You can access our APIs in a few clicks and start scheduling. We've also developped several libraries to make it even easier for you to integrate.",
     image: {
       url: AccessibilityImage
-    }
+    },
+    buttons: [
+      {
+        label: "Ruby",
+        url: "https://github.com/bloodbath-io/bloodbath-ruby"
+      }
+    ]
   },
   {
     title: 'Scalability',
     description: "Our infrastructure is virtually unbreakable. You can scale up however you want, use the scheduler as intensively as you need to and we guarantee it won't break. We're very serious about SLOs.",
     image: {
       url: ScalabilityImage
-    }
+    },
+    buttons: []
   },
   {
     title: 'Analytics',
     description: "We digest data for you so you don't have to worry about this part. You'll understand the event flow straight away just by reading our analysis.",
     image: {
       url: AnalyticsImage
-    }
+    },
+    buttons: []
   },
 ]
 
@@ -47,14 +58,16 @@ const allAbouts = [
     description: "The world is changing and there's an obvious technological need for precision. Our idea is simple, but very effective: removing the pain of scheduling & dispatching payloads in your stack. Our solution is and will always be simple and flexible.",
     image: {
       url: TheAdvancedjectImage
-    }
+    },
+    buttons: []
   },
   {
     title: 'The company',
     description: "Born in June 2021, it was founded by Laurent Schaffner which's an experienced engineer. It's still in closed beta and waiting for your feedbacks.",
     image: {
       url: TheCompanyImage
-    }
+    },
+    buttons: []
   }
 ]
 
@@ -64,7 +77,7 @@ const allSubscriptions = [
     title: 'Discovery',
     price: 'Free',
     cents: null,
-    frequency: 'forever',
+    frequency: 'to play around',
     description: 'This is our most basic plan. It gives you 5,000 events to schedule and test our system out. All other functionalities are the same than the other plans.',
     callToAction: 'Sign up for free now',
     click: selectDiscovery
@@ -75,8 +88,8 @@ const allSubscriptions = [
     price: '$1',
     cents: '.25',
     frequency: 'per 1,000 events',
-    description: 'If you’re a growing company and have more serious loads to send, this one will fit you perfectly. You can try it out before taking a decision.',
-    callToAction: 'Try for free',
+    description: 'If you’re a growing company and have more serious loads to send, this one will fit you perfectly. You can try it out before taking your final decision.',
+    callToAction: 'Choose this plan',
     click: selectAdvanced
   },
   {
@@ -115,12 +128,22 @@ const featureBlock = (block, index) => {
         <div className="col-xs-12 col-sm-5">
           <h3 className="features-block__title">{block.title}</h3>
           <p className="features-block__text">{block.description}</p>
+          <p className="features-block__buttons">
+          {block.buttons.map((node, index) => (
+
+          <button className="button button--white-alt" onClick={() => { window.open(node.url) }}>
+             {node.label}
+          </button>
+
+          ))}
+          </p>
         </div>
         <div className="col-xs-12 first-xs col-sm-5 last-sm col-md-5 col-md-offset-1">
           <div className="features-block__image">
             <img src={block.image.url} />
           </div>
         </div>
+
       </div>
     )
   } else {
