@@ -36,7 +36,7 @@ const allFeatures = [
   },
   {
     title: 'Scalability',
-    description: "Our infrastructure is virtually unbreakable. You can scale up however you want, use the scheduler as intensively as you need to and we guarantee it won't break and will be on time, every time. We're very serious about SLOs.",
+    description: "Our infrastructure is virtually unbreakable. You can scale up however you want, use the scheduler as intensively as you need to and we guarantee it'll be on time, every time. We're very serious about SLOs.",
     image: {
       url: ScalabilityImage
     },
@@ -95,10 +95,10 @@ const allSubscriptions = [
   {
     slug: 'enterprise',
     title: 'Enterprise',
-    price: '$?',
+    price: 'Custom',
     cents: '',
     frequency: 'from 1,000,000 events',
-    description: 'You’re a bigger, more established company which needs to schedule a lot more events each month. No worry, we can discuss about custom prices.',
+    description: 'You’re a bigger, more established company which needs to schedule a lot more events on a regular basis. No worry, we can discuss about custom prices.',
     callToAction: 'Contact sales',
     click: selectEnterprise
   },
