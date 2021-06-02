@@ -92,26 +92,41 @@ export default function Layout({ children, language, menu, home, banner }) {
       </div>
       <div className="footer">
         <div className="container-fluid">
-          <div className="row middle-xs center-xs">
-            <div className="col-xs-4">
+          <div className="row middle-xs start-xs">
+            <div className="col-xs-1">
+              {/*Placeholder*/}
+            </div>
+            <div className="col-xs-3">
               <h1 className="footer__logo">
                 Bloodbath.
               </h1>
             </div>
             <div className="col-xs-4">
-              {/*Legal paper will be there*/}
+              {/*We can add more things here*/}
             </div>
-            <div className="col-xs-4">
-              <div>
-                <a href="/term-of-use">
-                  Term of use
-                </a>
+            <div className="col-xs-3">
+              <div className="row middle-xs end-xs">
+                <div className="col-xs-12">
+                  <div>
+                    <a href="/term-of-use">
+                      Term of use
+                    </a>
+                  </div>
+                  <div>
+                    <a href="/privacy-policy">
+                      Privacy Policy
+                    </a>
+                  </div>
+                  <div>
+                    <a href="/legal-notice">
+                      Legal notice
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div>
-                <a href="/privacy-policy">
-                  Privacy Policy
-                </a>
-              </div>
+            </div>
+            <div className="col-xs-1">
+              {/*Placeholder*/}
             </div>
           </div>
         </div>
