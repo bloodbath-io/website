@@ -108,17 +108,17 @@ export default function Layout({ children, language, menu, home, banner }) {
               <div className="row middle-xs end-xs">
                 <div className="col-xs-12">
                   <div>
-                    <a href="/term-of-use">
+                    <a href="https://legal.bloodbath.io/term-of-use">
                       Term of use
                     </a>
                   </div>
                   <div>
-                    <a href="/privacy-policy">
+                    <a href="https://legal.bloodbath.io/privacy-policy">
                       Privacy Policy
                     </a>
                   </div>
                   <div>
-                    <a href="/legal-notice">
+                    <a href="https://legal.bloodbath.io/legal-notice">
                       Legal notice
                     </a>
                   </div>
