@@ -104,21 +104,21 @@ export default function Layout({ children, language, menu, home, banner }) {
             <div className="col-xs-4">
               {/*We can add more things here*/}
             </div>
-            <div className="col-xs-3">
+            <div className="col-xs-4 col-md-3">
               <div className="row middle-xs end-xs">
                 <div className="col-xs-12">
                   <div>
-                    <a href="https://legal.bloodbath.io/term-of-use">
+                    <a href="https://legal.bloodbath.io/terms-of-use" target="_blank">
                       Term of use
                     </a>
                   </div>
                   <div>
-                    <a href="https://legal.bloodbath.io/privacy-policy">
+                    <a href="https://legal.bloodbath.io/privacy-policy" target="_blank">
                       Privacy Policy
                     </a>
                   </div>
                   <div>
-                    <a href="https://legal.bloodbath.io/legal-notice">
+                    <a href="https://legal.bloodbath.io/legal-notice" target="_blank">
                       Legal notice
                     </a>
                   </div>
