@@ -124,14 +124,14 @@ const allSubscriptionAdvantages = [
 const featureBlock = (block, index) => {
   if (isOdd(index)) {
     return (
-      <div className="row features-block middle-xs center-xs">
+      <div className="row features-block middle-xs center-xs" key={index}>
         <div className="col-xs-12 col-sm-5">
           <h3 className="features-block__title">{block.title}</h3>
           <p className="features-block__text">{block.description}</p>
           <p className="features-block__buttons">
           {block.buttons.map((node, index) => (
 
-          <button className="button button--white-alt" onClick={() => { window.open(node.url) }}>
+          <button className="button button--white-alt" onClick={() => { window.open(node.url) }} key={index}>
              {node.label}
           </button>
 
@@ -148,7 +148,7 @@ const featureBlock = (block, index) => {
     )
   } else {
     return (
-      <div className="row features-block middle-xs center-xs">
+      <div className="row features-block middle-xs center-xs" key={index}>
       <div className="col-xs-12 col-sm-5 col-sm-offset-1">
           <div className="features-block__image">
             <img src={block.image.url} />
@@ -167,7 +167,7 @@ const subscriptionBlock = (block, advantages, index) => {
 
   const filteredAdvantages = advantages.filter((advantage) => (advantage.slug === block.slug) || (advantage.subscriptionSlug === ''))
 
-  return (<div className="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+  return (<div className="col-xs-12 col-sm-12 col-md-6 col-lg-4" key={index}>
     <div className="pricing-block">
       <div className="pricing-block__title">{block.title}</div>
       <div className="pricing-block__price">{block.price}<span className="pricing-block__price--cents">{block.cents}</span></div>
