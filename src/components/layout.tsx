@@ -8,8 +8,8 @@ export default function Layout({ children, language, menu, home, banner }) {
   return (<main>
     <Helmet>
       <html lang={language} />
-      <title>Bloodbath - Agnostic payload dispatch.</title>
-      <description>Schedule events, optimize your architecture and integrate easily with your codebase stack.</description>
+      <title>Bloodbath - Agnostic job scheduler.</title>
+      <description>Dispatch events on time, take load off your architecture and integrate easily with your technical stack.</description>
     </Helmet>
     <div className="wrapper">
       {/* Header */}
