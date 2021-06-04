@@ -234,7 +234,7 @@ const IndexPage = ({ data, pageContext }) => {
               <div className="row center-xs">
                 <div className="col-xs-10 col-md-6">
                   <div className="introduction__underline">
-                  Dispatch events on time, take load off your architecture and integrate easily with your technical stack.
+                  Dispatch events on time, take load off your infrastructure and integrate easily with your technical stack.
                   </div>
                 </div>
               </div>
