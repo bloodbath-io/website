@@ -36,7 +36,7 @@ const allFeatures = [
   },
   {
     title: 'Scalability',
-    description: "Our infrastructure is virtually unbreakable. Scale up without worrying by using the scheduler as intensively as you need to and we guarantee it'll be on time, every time. We're very serious about SLOs.",
+    description: "Our infrastructure is virtually unbreakable. Scale up without worrying by using the scheduler as intensively as you need to. We guarantee it'll be on time, every time. We're very serious about SLOs.",
     image: {
       url: ScalabilityImage
     },
