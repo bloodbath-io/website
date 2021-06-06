@@ -9,7 +9,7 @@ export default function Layout({ children, language, menu, home, banner }) {
     <Helmet>
       <html lang={language} />
       <title>Bloodbath - Agnostic job scheduler.</title>
-      <description>Dispatch events on time, take load off your infrastructure and integrate easily with your technical stack.</description>
+      <description>Dispatch events on time, reduce infrastructure stress and integrate easily with your technical stack.</description>
     </Helmet>
     <div className="wrapper">
       {/* Header */}

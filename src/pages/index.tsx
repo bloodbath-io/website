@@ -36,7 +36,7 @@ const allFeatures = [
   },
   {
     title: 'Scalability',
-    description: "Our infrastructure is virtually unbreakable. Scale up without worrying by using the scheduler as intensively as you need to. We guarantee it'll be on time, every time. We're very serious about SLOs.",
+    description: "Our infrastructure is virtually unbreakable. Scale up without worrying by using the scheduler as intensively as you need. We guarantee it'll be on time, every time. We're very serious about SLOs.",
     image: {
       url: ScalabilityImage
     },
@@ -44,7 +44,7 @@ const allFeatures = [
   },
   {
     title: 'Analytics',
-    description: "We digest data for you so you don't have to worry about this part. You'll understand the event flow straight away just by reading our analysis.",
+    description: "We digest data for you so you don't have to worry about this part. You'll understand the event flow right away just by reading our analysis.",
     image: {
       url: AnalyticsImage
     },
@@ -63,7 +63,7 @@ const allAbouts = [
   },
   {
     title: 'The company',
-    description: "Born in June 2021, it was founded by Laurent Schaffner which's an experienced engineer. It's still in open beta and waiting for your feedbacks.",
+    description: "Born in June 2021, it was founded by Laurent Schaffner who's an experienced engineer. It's still in open beta and waiting for your feedback.",
     image: {
       url: TheCompanyImage
     },
@@ -78,7 +78,7 @@ const allSubscriptions = [
     price: 'Free',
     cents: null,
     frequency: 'to play around',
-    description: 'This is our most basic plan. It gives you 5,000 events to schedule and test our system out. All other functionalities are the same than the other plans.',
+    description: 'This is our most basic plan. It gives you 5,000 events to schedule and test our system out. All other functionalities are the same from the other plans.',
     callToAction: 'Sign up for free now',
     click: selectDiscovery
   },
@@ -98,7 +98,7 @@ const allSubscriptions = [
     price: 'Custom',
     cents: '',
     frequency: 'from 1,000,000 events',
-    description: 'You’re a bigger, more established company which needs to schedule a lot more events on a regular basis. No worry, we can discuss about custom prices.',
+    description: 'You’re a bigger, more established company that needs to schedule a lot more events on a regular basis. No worry, we can discuss about custom prices.',
     callToAction: 'Contact sales',
     click: selectEnterprise
   },
@@ -234,7 +234,7 @@ const IndexPage = ({ data, pageContext }) => {
               <div className="row center-xs">
                 <div className="col-xs-10 col-md-6">
                   <div className="introduction__underline">
-                  Dispatch events on time, take load off your infrastructure and integrate easily with your technical stack.
+                  Dispatch events on time, reduce infrastructure stress and integrate easily with your technical stack.
                   </div>
                 </div>
               </div>
