@@ -26,7 +26,7 @@ module.exports = {
           resolve: `gatsby-plugin-google-gtag`,
           options: {
             trackingIds: [
-              "G-MV75YRMB44"
+              "G-S3ND8VFBEX"
             ],
           },
         },
@@ -34,7 +34,7 @@ module.exports = {
           resolve: `gatsby-plugin-hotjar`,
           options: {
             includeInDevelopment: false,
-            id: 2206920,
+            id: 2453694,
             sv: 6,
           },
         },
