@@ -39,10 +39,10 @@ module.exports = {
           },
         },
         {
-          resolve: 'gatsby-plugin-load-script',
-          options: {
-            src: '/scripts/crisp.js'
-          }
+          // resolve: 'gatsby-plugin-load-script',
+          // options: {
+          //   src: '/scripts/crisp.js'
+          // }
         },
     ]
 }
