@@ -1,9 +1,10 @@
-import * as React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 
 import { learnHow, signUp, goDown, selectDiscovery, selectAdvanced, selectEnterprise} from '../helpers/navigate'
 import { isOdd } from '../helpers/numbers'
 import { navigate } from "gatsby"
+import Loader from "react-loader-spinner"
 
 import IntroductionImage from "../images/introduction.svg"
 import DownImage from "../images/down.svg"
@@ -218,6 +219,13 @@ const advantagesList = (plan: Array<{ highlight?: boolean, text: string}>) => {
 }
 
 const IndexPage = ({ data, pageContext }) => {
+  const [isClickedSignUp, setClickedSignUp] = useState(false)
+
+  const clickOnSignUp = (e) => {
+    setClickedSignUp(true)
+    signUp()
+  }
+
   return (
     <main>
       <Layout language={pageContext.language}>
@@ -240,8 +248,15 @@ const IndexPage = ({ data, pageContext }) => {
               </div>
               <div className="row center-xs">
                 <div className="introduction__buttons">
-                  <button className="button" onClick={signUp}>
-                    Sign up for free now
+                  <button className="button" onClick={clickOnSignUp}>
+                    {isClickedSignUp ? <Loader
+                      type="TailSpin"
+                      color="#FFF"
+                      height={17}
+                      width={155}
+                      timeout={0}
+                    /> :
+                    "Sign up for free now"}
                   </button>
                   <button className="button button--white-alt" onClick={learnHow}>
                     Learn how we do it

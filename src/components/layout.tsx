@@ -1,10 +1,25 @@
-import React from "react"
+import React, { useState } from "react"
 import { Helmet } from "react-helmet"
+import Loader from "react-loader-spinner"
 
 import { Link } from "gatsby"
 import { goHome, signIn, bottomSignUp } from '../helpers/navigate'
 
+
 export default function Layout({ children, language, menu, home, banner }) {
+  const [isClickedSignIn, setClickedSignIn] = useState(false)
+  const [isClickedSignUp, setClickedSignUp] = useState(false)
+
+  const clickOnSignIn = () => {
+    setClickedSignIn(true)
+    signIn()
+  }
+
+  const clickOnSignUp = (e) => {
+    setClickedSignUp(true)
+    bottomSignUp()
+  }
+
   return (<main>
     <Helmet>
       <html lang={language} />
@@ -49,8 +64,15 @@ export default function Layout({ children, language, menu, home, banner }) {
                   </Link>
                 </div>
                 <div className="header__item header__item--sign-in">
-                  <button className="button button--white-alt" onClick={signIn}>
-                    Sign in ->
+                  <button className="button button--white-alt" onClick={clickOnSignIn}>
+                    {isClickedSignIn ? <Loader
+                      type="TailSpin"
+                      color="#ea5758"
+                      height={17}
+                      width={75}
+                      timeout={0}
+                    /> :
+                    "Sign in ->"}
                   </button>
                 </div>
               </div>
@@ -81,8 +103,15 @@ export default function Layout({ children, language, menu, home, banner }) {
               </div>
               <div className="row center-xs">
                 <div className="col-lg-4 col-md-6">
-                  <div className="button button--white" onClick={bottomSignUp}>
-                    Sign up for free now
+                  <div className="button button--white" onClick={clickOnSignUp}>
+                  {isClickedSignUp ? <Loader
+                      type="TailSpin"
+                      color="#ea5758"
+                      height={17}
+                      width={75}
+                      timeout={0}
+                    /> :
+                    "Sign up for free now"}
                   </div>
                 </div>
               </div>
