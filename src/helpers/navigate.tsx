@@ -9,11 +9,11 @@ export const goHome = () => {
 }
 
 export const signIn = () => {
-  navigate(signinEndpoint)
+  window.open(signinEndpoint)
 }
 
 export const signUp = () => {
-  navigate(signupEndpoint)
+  window.open(signupEndpoint)
 }
 
 export const learnHow = () => {
@@ -25,11 +25,11 @@ export const goDown = () => {
 }
 
 export const selectDiscovery = () => {
-  navigate(signupEndpoint)
+  window.open(signupEndpoint)
 }
 
 export const selectAdvanced = () => {
-  navigate(signupEndpoint)
+  window.open(signupEndpoint)
 }
 
 export const selectEnterprise = () => {
