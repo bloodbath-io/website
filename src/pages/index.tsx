@@ -224,6 +224,7 @@ const IndexPage = ({ data, pageContext }) => {
   const clickOnSignUp = (e) => {
     setClickedSignUp(true)
     signUp()
+    setTimeout(() => { setClickedSignUp(false) }, 3000)
   }
 
   return (

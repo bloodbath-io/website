@@ -13,11 +13,13 @@ export default function Layout({ children, language, menu, home, banner }) {
   const clickOnSignIn = () => {
     setClickedSignIn(true)
     signIn()
+    setTimeout(() => { setClickedSignIn(false) }, 3000)
   }
 
   const clickOnSignUp = (e) => {
     setClickedSignUp(true)
     bottomSignUp()
+    setTimeout(() => { setClickedSignUp(false) }, 3000)
   }
 
   return (<main>
