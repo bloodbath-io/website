@@ -24,7 +24,7 @@ import Layout from "../components/layout"
 const codeSamples = (index) => {
   return (
     <p className="features-block__buttons">
-    <button className="button button--white-alt" onClick={() => { 'https://random.shit' }} key={index}>
+    <button className="button button--white-alt" onClick={() => { 'https://github.com/bloodbath-io/bloodbath-ruby' }} key={index}>
        Ruby
     </button>
     </p>
