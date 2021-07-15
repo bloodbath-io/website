@@ -21,6 +21,16 @@ import RubyImage from "../images/ruby.png"
 
 import Layout from "../components/layout"
 
+const codeSamples = (index) => {
+  return (
+    <p className="features-block__buttons">
+    <button className="button button--white-alt" onClick={() => { 'https://random.shit' }} key={index}>
+       Ruby
+    </button>
+    </p>
+  )
+}
+
 const allFeatures = [
   {
     title: 'Accessibility',
@@ -28,12 +38,7 @@ const allFeatures = [
     image: {
       url: AccessibilityImage
     },
-    buttons: [
-      {
-        label: "Ruby",
-        url: "https://github.com/bloodbath-io/bloodbath-ruby"
-      }
-    ]
+    extraContent: codeSamples
   },
   {
     title: 'Scalability',
@@ -41,7 +46,7 @@ const allFeatures = [
     image: {
       url: ScalabilityImage
     },
-    buttons: []
+    extraContent: () => {}
   },
   {
     title: 'Analytics',
@@ -49,7 +54,7 @@ const allFeatures = [
     image: {
       url: AnalyticsImage
     },
-    buttons: []
+    extraContent: () => {}
   },
 ]
 
@@ -60,7 +65,7 @@ const allAbouts = [
     image: {
       url: TheAdvancedjectImage
     },
-    buttons: []
+    extraContent: () => {}
   },
   {
     title: 'The company',
@@ -68,7 +73,7 @@ const allAbouts = [
     image: {
       url: TheCompanyImage
     },
-    buttons: []
+    extraContent: () => {}
   }
 ]
 
@@ -129,15 +134,7 @@ const featureBlock = (block, index) => {
         <div className="col-xs-12 col-sm-5">
           <h3 className="features-block__title">{block.title}</h3>
           <p className="features-block__text">{block.description}</p>
-          <p className="features-block__buttons">
-          {block.buttons.map((node, index) => (
-
-          <button className="button button--white-alt" onClick={() => { window.open(node.url) }} key={index}>
-             {node.label}
-          </button>
-
-          ))}
-          </p>
+          {block.extraContent()}
         </div>
         <div className="col-xs-12 first-xs col-sm-5 last-sm col-md-5 col-md-offset-1">
           <div className="features-block__image">
