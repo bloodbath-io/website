@@ -61,7 +61,7 @@ export default function Layout({ children, language, menu, home, banner }) {
                   </Link>
                 </div>
                 <div className="header__item">
-                  <Link className="header__link" target="_blank" to="https://docs.bloodbath.io">
+                  <Link className="header__link" target="_blank" to="https://bloodbath.notion.site/Guide-00a3edc8f43b4528b2e34bf5eac5b0df">
                     Docs
                   </Link>
                 </div>
@@ -139,17 +139,17 @@ export default function Layout({ children, language, menu, home, banner }) {
               <div className="row middle-xs end-xs">
                 <div className="col-xs-12">
                   <div>
-                    <a href="https://legal.bloodbath.io/terms-of-use" target="_blank">
+                    <a href="https://bloodbath.notion.site/Terms-of-use-9d841843e365498cbc48c546d94a2516" target="_blank">
                       Term of use
                     </a>
                   </div>
                   <div>
-                    <a href="https://legal.bloodbath.io/privacy-policy" target="_blank">
+                    <a href="https://bloodbath.notion.site/Privacy-policy-34446706209e46ee8e5a80aa209c6eb5" target="_blank">
                       Privacy Policy
                     </a>
                   </div>
                   <div>
-                    <a href="https://legal.bloodbath.io/legal-notice" target="_blank">
+                    <a href="https://bloodbath.notion.site/Legal-notice-50c9fb50207b4037967b88086c435549" target="_blank">
                       Legal notice
                     </a>
                   </div>

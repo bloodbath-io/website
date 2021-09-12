@@ -21,13 +21,29 @@ import RubyImage from "../images/ruby.png"
 
 import Layout from "../components/layout"
 
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
+import 'react-tabs/style/react-tabs.css' // TODO: replace that by my own css
+
 const codeSamples = (index) => {
   return (
-    <p className="features-block__buttons">
-    <button className="button button--white-alt" onClick={() => { 'https://github.com/bloodbath-io/bloodbath-ruby' }} key={index}>
-       Ruby
-    </button>
-    </p>
+    <Tabs>
+    <TabList>
+      <Tab>Title 1</Tab>
+      <Tab>Title 2</Tab>
+    </TabList>
+
+    <TabPanel>
+      <h2>Any content 1</h2>
+    </TabPanel>
+    <TabPanel>
+      <h2>Any content 2</h2>
+    </TabPanel>
+  </Tabs>
+    // <p className="features-block__buttons">
+    // <button className="button button--white-alt" onClick={() => { 'https://github.com/bloodbath-io/bloodbath-ruby' }} key={index}>
+    //    Ruby
+    // </button>
+    // </p>
   )
 }
 
