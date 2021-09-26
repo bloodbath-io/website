@@ -61,7 +61,7 @@ export default function Layout({ children, language, menu, home, banner }) {
                   </Link>
                 </div>
                 <div className="header__item">
-                  <Link className="header__link" target="_blank" to="https://bloodbath.notion.site/Guide-00a3edc8f43b4528b2e34bf5eac5b0df">
+                  <Link className="header__link" target="_blank" to="https://docs.bloodbath.io">
                     Docs
                   </Link>
                 </div>
