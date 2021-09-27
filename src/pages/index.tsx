@@ -17,7 +17,9 @@ import AccessibilityImage from "../images/accessibility.svg"
 import ScalabilityImage from "../images/scalability.svg"
 import AnalyticsImage from "../images/analytics.svg"
 
-import RubyImage from "../images/ruby.png"
+import RubySample from "../images/ruby-sample.svg"
+import PythonSample from "../images/python-sample.svg"
+import NodeSample from "../images/node-sample.svg"
 
 import Layout from "../components/layout"
 
@@ -26,24 +28,29 @@ import 'react-tabs/style/react-tabs.css' // TODO: replace that by my own css
 
 const codeSamples = (index) => {
   return (
-    <Tabs>
+    <Tabs className="tabs">
+    <TabPanel>
+      <a href="https://github.com/bloodbath-io/bloodbath-ruby" target="_blank">
+        <img src={RubySample} />
+      </a>
+    </TabPanel>
+    <TabPanel>
+      <a href="https://github.com/bloodbath-io/bloodbath-python" target="_blank">
+        <img src={PythonSample} />
+      </a>
+    </TabPanel>
+    <TabPanel>
+      <a href="https://github.com/bloodbath-io/bloodbath-node" target="_blank">
+        <img src={NodeSample} />
+      </a>
+    </TabPanel>
     <TabList>
-      <Tab>Title 1</Tab>
-      <Tab>Title 2</Tab>
+      <Tab>Ruby</Tab>
+      <Tab>Python</Tab>
+      <Tab>Node</Tab>
     </TabList>
 
-    <TabPanel>
-      <h2>Any content 1</h2>
-    </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
   </Tabs>
-    // <p className="features-block__buttons">
-    // <button className="button button--white-alt" onClick={() => { 'https://github.com/bloodbath-io/bloodbath-ruby' }} key={index}>
-    //    Ruby
-    // </button>
-    // </p>
   )
 }
 
@@ -51,10 +58,11 @@ const allFeatures = [
   {
     title: 'Accessibility',
     description: "Nothing to install, fast sign-up and super simple interface. We have a coders first approach. You can access our APIs in a few clicks and start scheduling. We've also developed several libraries to make it even easier for you to integrate.",
-    image: {
-      url: AccessibilityImage
-    },
-    extraContent: codeSamples
+    content: codeSamples,
+    // image: {
+    //   url: AccessibilityImage
+    // },
+    extraContent: () => {}
   },
   {
     title: 'Scalability',
@@ -152,9 +160,9 @@ const featureBlock = (block, index) => {
           <p className="features-block__text">{block.description}</p>
           {block.extraContent()}
         </div>
-        <div className="col-xs-12 first-xs col-sm-5 last-sm col-md-5 col-md-offset-1">
+        <div className="col-xs-12 first-xs col-sm-5 last-sm col-md-6 col-md-offset-1">
           <div className="features-block__image">
-            <img src={block.image.url} />
+          {(block.image ? <img src={block.image.url} /> : block.content())}
           </div>
         </div>
 

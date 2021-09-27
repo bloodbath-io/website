@@ -32,6 +32,8 @@ body {
   }
 }
 
+body:focus { outline: none !important; }
+
 button:focus {
   outline: 0;
 }
