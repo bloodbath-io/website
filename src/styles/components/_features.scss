@@ -15,7 +15,7 @@
 }
 
 .features-block {
-  margin-top: 5em;
+  margin-top: 2em;
   margin-bottom: 5em;
 }
 
@@ -54,7 +54,7 @@
 
 .features-block__image {
   @include breakpoint("xs") {
-    max-width: 70%;
+    max-width: 85%;
     margin: auto;
   }
 }
