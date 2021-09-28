@@ -1,6 +1,10 @@
 .tabs {
   padding-top: 1em;
   background-color: transparent !important;
+  min-height: 200px;
+}
+
+.tabs__panel {
 }
 
 .react-tabs__tab--selected {
