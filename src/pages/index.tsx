@@ -30,19 +30,25 @@ const codeSamples = (index) => {
   return (
     <Tabs className="tabs">
     <TabPanel className="tabs__panel">
-      <a href="https://github.com/bloodbath-io/bloodbath-ruby" target="_blank">
-        <img src={RubySample} />
-      </a>
+      <div className="tabs__innerpanel">
+        <a href="https://github.com/bloodbath-io/bloodbath-ruby" target="_blank">
+          <img src={RubySample} />
+        </a>
+      </div>
     </TabPanel>
     <TabPanel className="tabs__panel">
-      <a href="https://github.com/bloodbath-io/bloodbath-python" target="_blank">
-        <img src={PythonSample} />
-      </a>
+      <div className="tabs__innerpanel">
+        <a href="https://github.com/bloodbath-io/bloodbath-python" target="_blank">
+          <img src={PythonSample} />
+        </a>
+      </div>
     </TabPanel>
     <TabPanel className="tabs__panel">
-      <a href="https://github.com/bloodbath-io/bloodbath-node" target="_blank">
-        <img src={NodeSample} />
-      </a>
+      <div className="tabs__innerpanel">
+        <a href="https://github.com/bloodbath-io/bloodbath-node" target="_blank">
+          <img src={NodeSample} />
+        </a>
+      </div>
     </TabPanel>
     <TabList>
       <Tab>Ruby</Tab>
