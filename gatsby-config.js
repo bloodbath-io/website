@@ -37,6 +37,12 @@ module.exports = {
             id: 2453694,
             sv: 6,
           },
+        },
+        {
+          resolve: 'gatsby-plugin-load-script',
+          options: {
+            src: '/scripts/crisp.js'
+          }
         }
     ]
 }
