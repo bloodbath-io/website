@@ -99,7 +99,7 @@ const allAbouts = [
   },
   {
     title: 'The company',
-    description: "Born in June 2021, it was founded by Laurent Schaffner who's an experienced engineer. It's still in open beta and waiting for your feedback.",
+    description: "Born in early 2022, it was founded by Laurent Schaffner who's an experienced engineer. It's still in open beta and waiting for your feedback.",
     image: {
       url: TheCompanyImage
     },
