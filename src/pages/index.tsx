@@ -114,7 +114,7 @@ const allSubscriptions = [
     price: 'Free',
     cents: null,
     frequency: 'to play around',
-    description: 'This is our most basic plan. It gives you 5,000 events to schedule and test our system out. All other functionalities are the same from the other plans.',
+    description: 'This is our most basic plan. It gives you 2,000 events to schedule and test our system out. All other functionalities are the same from the other plans.',
     callToAction: 'Sign up for free now',
     click: selectDiscovery
   },
@@ -144,7 +144,7 @@ const allSubscriptionAdvantages = [
   { text: 'No throttling', slug: 'discovery'},
   { text: 'Unlimited analytics', slug: 'discovery' },
   { text: 'Unlimited support', slug: 'discovery' },
-  { text: 'Up to 5,000 events', slug: 'discovery' },
+  { text: 'Up to 2,000 events', slug: 'discovery' },
   //
   { text: 'No throttling', slug: 'advanced'},
   { text: 'Unlimited analytics', slug: 'advanced' },
