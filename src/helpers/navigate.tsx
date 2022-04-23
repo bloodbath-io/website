@@ -3,6 +3,7 @@ import { Link, navigate } from "gatsby"
 const mainEndpoint = 'https://app.bloodbath.io'
 const signupEndpoint = 'https://app.bloodbath.io/signup'
 const signinEndpoint = 'https://app.bloodbath.io/signin'
+const githubRubyEndpoint = 'https://github.com/bloodbath-io/bloodbath-ruby'
 
 export const goHome = () => {
   navigate('/')
@@ -14,6 +15,10 @@ export const signIn = () => {
 
 export const signUp = () => {
   window.open(signupEndpoint)
+}
+
+export const seeGithubRuby = () => {
+  window.open(githubRubyEndpoint)
 }
 
 export const learnHow = () => {

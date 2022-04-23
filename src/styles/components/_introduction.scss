@@ -41,3 +41,21 @@
   margin-bottom: 3em;
   cursor: pointer;
 }
+
+.introduction__code {
+  margin-bottom: 4em !important;
+  padding: 1em;
+  border: 1px solid $color-gray-300;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.introduction__code_image {
+  margin: auto;
+  margin-top: 3em;
+  @include breakpoint('xs') {
+    max-width: 80%;
+  }
+  max-width: 50%;
+}
