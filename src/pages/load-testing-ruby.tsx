@@ -8,11 +8,7 @@ import Loader from "react-loader-spinner"
 
 import RubyImage from "../images/ruby.png"
 
-import Layout from "../components/layout"
-
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-import 'react-tabs/style/react-tabs.css' // TODO: replace that by my own css
-
+import LayoutLight from "../components/layout-light"
 
 const IndexPage = ({ data, pageContext }) => {
   const [isClickedSignUp, setClickedSignUp] = useState(false)
@@ -25,7 +21,7 @@ const IndexPage = ({ data, pageContext }) => {
 
   return (
     <main>
-      <Layout language={pageContext.language}>
+      <LayoutLight language={pageContext.language}>
         <div className="container-fluid">
           <div className="row introduction">
             <div className="col-xs-12">
@@ -70,7 +66,7 @@ const IndexPage = ({ data, pageContext }) => {
             </div>
           </div>
       </div>
-    </Layout>
+    </LayoutLight>
   </main>
   )
 }
