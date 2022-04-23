@@ -34,7 +34,7 @@ export default function Layout({ children, language, menu, home, banner }) {
         <div className="container-fluid">
           <div className="row middle-xs">
             <div className="col-lg col-md-4 col-xs-2">
-              <h1 className="header__logo" onClick={goHome}>
+              <h1 className="header__logo-no-click">
                 Bloodbath.
               </h1>
             </div>

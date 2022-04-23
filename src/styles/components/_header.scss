@@ -12,6 +12,14 @@
     cursor: pointer;
   }
 
+  .header__logo-no-click {
+    font-size: 28px;
+    letter-spacing: -0.9px;
+    font-weight: 800;
+    color: $color-black;
+    cursor: auto;
+  }
+
   .header__items {
     display: flex;
     align-items: center;
