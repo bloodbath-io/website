@@ -22,7 +22,7 @@ export const seeGithubRuby = () => {
 }
 
 export const learnHow = () => {
-  navigate('#features')
+  navigate('#examples')
 }
 
 export const goDown = () => {

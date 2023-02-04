@@ -324,7 +324,7 @@ const IndexPage = ({ data, pageContext }) => {
           </div>
         {/* Write your own scenarios */}
         <div className="container-fluid">
-          <div className="row center-xs features" id="features">
+          <div className="row center-xs features" id="examples">
             <div className="col-lg-8 col-md-10 col-xs-12">
               <div className="row">
                 <div className="col-xs-12">

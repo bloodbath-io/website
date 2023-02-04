@@ -33,23 +33,23 @@ export default function Layout({ children, language, menu, home, banner }) {
       <div className="header">
         <div className="container-fluid">
           <div className="row middle-xs">
-            <div className="col-lg col-md-4 col-xs-2">
+            <div className="col-lg-4 col-md-4 col-xs-2">
               <h1 className="header__logo" onClick={goHome}>
                 Bloodbath.
               </h1>
             </div>
-            <div className="col-lg col-md-8 col-xs-10">
+            <div className="col-lg-8 col-md-8 col-xs-10">
               <div className="header__items">
                 <div className="header__item">
-                  <Link className="header__link" to="#features">
-                    Features
+                  <Link className="header__link" to="#examples">
+                    Use-cases
                   </Link>
                 </div>
-                {/* <div className="header__item">
-                  <Link className="header__link" to="#use-cases">
-                    Use cases
+                <div className="header__item">
+                  <Link className="header__link" to="#features">
+                    Our approach
                   </Link>
-                </div> */}
+                </div>
                 <div className="header__item">
                   <Link className="header__link" to="#pricing">
                     Pricing
