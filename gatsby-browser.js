@@ -1,19 +1,7 @@
+/**
+ * Implement Gatsby's Browser APIs in this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/
+ */
+
 import "./src/styles/app.scss"
-
-const ensureCorrectURL = () => {
-  if (window.location.hostname.indexOf('www') === 0) {
-    window.location = window.location.href.replace('www.', '')
-  }
-}
-
-export const onClientEntry = () => {
-  window.onload = () => {
-    ensureCorrectURL()
-  }
-}
-
-export const shouldUpdateScroll = ({ routerProps }) => {
-  const hasAnchor = !!routerProps.location.hash; // (ie. /#features)
-
-  return hasAnchor
-}

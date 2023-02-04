@@ -4,34 +4,46 @@
   "private": true,
   "description": "Bloodbath",
   "author": "Laurent Schaffner",
+  "dependencies": {
+    "flexboxgrid": "^6.3.1",
+    "gatsby": "^5.5.0",
+    "gatsby-plugin-google-gtag": "^5.5.0",
+    "gatsby-plugin-hotjar": "^1.1.1",
+    "gatsby-plugin-image": "^3.5.0",
+    "gatsby-plugin-manifest": "^5.5.0",
+    "gatsby-plugin-react-helmet": "^6.5.0",
+    "gatsby-plugin-sass": "^6.5.0",
+    "gatsby-plugin-sharp": "^5.5.0",
+    "gatsby-source-filesystem": "^5.5.0",
+    "gatsby-transformer-sharp": "^5.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-loader-spinner": "^4.0.0",
+    "react-tabs": "^3.2.2",
+    "sass": "^1.58.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.3"
+  },
   "keywords": [
     "gatsby"
   ],
+  "license": "0BSD",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
     "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
-  "dependencies": {
-    "browser-lang": "^0.1.0",
-    "flexboxgrid": "^6.3.1",
-    "gatsby": "^2.26.1",
-    "gatsby-plugin-google-gtag": "^2.7.0",
-    "gatsby-plugin-hotjar": "^1.1.1",
-    "gatsby-plugin-intl": "^0.3.3",
-    "gatsby-plugin-load-script": "^1.1.0",
-    "gatsby-plugin-manifest": "^2.10.0",
-    "gatsby-plugin-react-helmet": "^3.8.0",
-    "gatsby-plugin-sass": "^3.0.0",
-    "gatsby-source-graphql": "^2.12.0",
-    "gsap": "^3.6.0",
-    "node-sass": "^6.0.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0",
-    "react-loader-spinner": "^4.0.0",
-    "react-tabs": "^3.2.2"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

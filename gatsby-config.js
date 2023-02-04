@@ -1,5 +1,3 @@
-const DATOCMS_READ_TOKEN = 'd2f0b3ae3e3a269411fbc829232383'
-
 module.exports = {
     plugins: [
         'gatsby-plugin-sass',
@@ -11,15 +9,6 @@ module.exports = {
             short_name: "Bloodbath",
             start_url: "/",
             icon: "src/images/icon.png",
-          },
-        },
-        {
-          resolve: `gatsby-plugin-intl`,
-          options: {
-            path: `${__dirname}/src/intl`,
-            languages: [`en`, `fr`],
-            defaultLanguage: `en`,
-            redirect: false,
           },
         },
         {
@@ -37,12 +26,6 @@ module.exports = {
             id: 2453694,
             sv: 6,
           },
-        },
-        {
-          resolve: 'gatsby-plugin-load-script',
-          options: {
-            src: '/scripts/crisp.js'
-          }
         }
     ]
 }
