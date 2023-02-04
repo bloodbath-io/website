@@ -25,8 +25,8 @@ export default function Layout({ children, language, menu, home, banner }) {
   return (<main>
     <Helmet>
       <html lang={language} />
-      <title>Bloodbath - Agnostic job scheduler.</title>
-      <description>Dispatch events on time, reduce infrastructure stress and integrate easily with your technical stack.</description>
+      <title>Load testing and stress tests for developers.</title>
+      <description>Maximize the performance and reliability of your stack through our expert load and stress testing services for websites, APIs, and servers.</description>
     </Helmet>
     <div className="wrapper">
       {/* Header */}
