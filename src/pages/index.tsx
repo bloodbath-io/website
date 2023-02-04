@@ -63,7 +63,7 @@ const codeSamples = (index) => {
 const allFeatures = [
   {
     title: 'Accessibility',
-    description: "Nothing to install, fast sign-up and super simple interface. We have a coders first approach. You can access our APIs in a few clicks and start scheduling. We've also developed several libraries to make it even easier for you to integrate.",
+    description: "Nothing to install, fast sign-up and super simple interface. We have a coders first approach. You can access our APIs in a few clicks and start stress tests. We've also developed several libraries to make it even easier for you to integrate.",
     content: codeSamples,
     // image: {
     //   url: AccessibilityImage
@@ -72,7 +72,7 @@ const allFeatures = [
   },
   {
     title: 'Scalability',
-    description: "Our infrastructure is virtually unbreakable. Scale up without worrying by using the scheduler as intensively as you need. We guarantee it'll be on time, every time. We're very serious about SLOs.",
+    description: "Scale up your tests without worrying by using the scheduler as intensively as you need. We guarantee it'll be on time, every time. We're very serious about SLOs.",
     image: {
       url: ScalabilityImage
     },
@@ -91,7 +91,7 @@ const allFeatures = [
 const allAbouts = [
   {
     title: 'The project',
-    description: "The world is changing and there's an obvious technological need for precision. Our idea is simple, but very effective: removing the pain of scheduling & dispatching payloads in your stack. Our solution is and will always be simple and flexible.",
+    description: "The world is changing and there's an obvious technological need for precision. Our idea is simple, but very effective: removing the pain of scheduling & dispatching stress tests. Our solution is and will always be simple and flexible.",
     image: {
       url: TheAdvancedjectImage
     },
@@ -99,7 +99,7 @@ const allAbouts = [
   },
   {
     title: 'The company',
-    description: "Born in early 2022, it was founded by Laurent Schaffner who's an experienced engineer. It's still in open beta and waiting for your feedback.",
+    description: "It was founded by Laurent Schaffner who's an experienced engineer. It's still in open beta and waiting for your feedback.",
     image: {
       url: TheCompanyImage
     },
@@ -263,14 +263,14 @@ const IndexPage = ({ data, pageContext }) => {
               <div className="row">
                 <div className="col-xs-12">
                   <h2 className="introduction__punchline">
-                  Agnostic job scheduler
+                  Load testing and stress tests for developers.
                   </h2>
                 </div>
               </div>
               <div className="row center-xs">
                 <div className="col-xs-10 col-md-6">
                   <div className="introduction__underline">
-                  Dispatch events on time, reduce infrastructure stress and integrate easily with your technical stack.
+                  Maximize the performance and reliability of your online presence through our expert load and stress testing services for websites, APIs, and servers.
                   </div>
                 </div>
               </div>
@@ -284,7 +284,7 @@ const IndexPage = ({ data, pageContext }) => {
                       width={155}
                       timeout={0}
                     /> :
-                    "Sign up for free now"}
+                    "Start your load testing"}
                   </button>
                   <button className="button button--white-alt" onClick={learnHow}>
                     Learn how we do it
