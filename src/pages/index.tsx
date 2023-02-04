@@ -16,6 +16,13 @@ import TheCompanyImage from "../images/the-company.svg"
 import AccessibilityImage from "../images/accessibility.svg"
 import ScalabilityImage from "../images/scalability.svg"
 import AnalyticsImage from "../images/analytics.svg"
+import PrivacyImage from "../images/privacy.svg"
+
+import SlowJsonImage from "../images/slow-json-image.svg"
+import SearchInputImage from "../images/search-input-image.svg"
+import BadSQLImage from "../images/bad-sql-image.svg"
+import MicroServicesImage from "../images/micro-services-image.svg"
+import GraphQLImage from "../images/graphql-image.svg"
 
 import RubySample from "../images/ruby-sample.svg"
 import PythonSample from "../images/python-sample.svg"
@@ -62,8 +69,8 @@ const codeSamples = (index) => {
 
 const allFeatures = [
   {
-    title: 'Accessibility',
-    description: "Nothing to install, fast sign-up and super simple interface. We have a coders first approach. You can access our APIs in a few clicks and start stress tests. We've also developed several libraries to make it even easier for you to integrate.",
+    title: 'Easy to code',
+    description: "Nothing to install, fast sign-up and super simple interface. We have a coders first approach. You can access our APIs in a few clicks and start coding your scenarios. We've also developed several libraries to make it even easier for you to integrate.",
     content: codeSamples,
     // image: {
     //   url: AccessibilityImage
@@ -71,7 +78,7 @@ const allFeatures = [
     extraContent: () => {}
   },
   {
-    title: 'Scalability',
+    title: 'Scales to your needs',
     description: "Scale up your tests without worrying by using the scheduler as intensively as you need. We guarantee it'll be on time, every time. We're very serious about SLOs.",
     image: {
       url: ScalabilityImage
@@ -79,10 +86,18 @@ const allFeatures = [
     extraContent: () => {}
   },
   {
-    title: 'Analytics',
+    title: 'Enjoy our analytics',
     description: "We digest data for you so you don't have to worry about this part. You'll understand the event flow right away just by reading our analysis.",
     image: {
       url: AnalyticsImage
+    },
+    extraContent: () => {}
+  },
+  {
+    title: 'We take privacy seriously',
+    description: "Storing endpoint responses could be a slippery road in terms of privacy. Our events-related data are purged after one week so you don't have to worry about that.",
+    image: {
+      url: PrivacyImage
     },
     extraContent: () => {}
   },
@@ -268,9 +283,9 @@ const IndexPage = ({ data, pageContext }) => {
                 </div>
               </div>
               <div className="row center-xs">
-                <div className="col-xs-10 col-md-6">
+                <div className="col-xs-10 col-md-8">
                   <div className="introduction__underline">
-                  Maximize the performance and reliability of your online presence through our expert load and stress testing services for websites, APIs, and servers.
+                  Maximize the performance and reliability of your stack through our expert load and stress testing services for websites, APIs, and servers.
                   </div>
                 </div>
               </div>
@@ -287,7 +302,7 @@ const IndexPage = ({ data, pageContext }) => {
                     "Start your load testing"}
                   </button>
                   <button className="button button--white-alt" onClick={learnHow}>
-                    Learn how we do it
+                    What is it for?
                   </button>
                 </div>
               </div>
@@ -307,6 +322,85 @@ const IndexPage = ({ data, pageContext }) => {
               </div>
             </div>
           </div>
+        {/* Write your own scenarios */}
+        <div className="container-fluid">
+          <div className="row center-xs features" id="features">
+            <div className="col-lg-8 col-md-10 col-xs-12">
+              <div className="row">
+                <div className="col-xs-12">
+                  <h2 className="features__punchline">
+                    Write your own scenarios
+                  </h2>
+                </div>
+              </div>
+
+
+            <div className="row features-block middle-xs center-xs" key="0">
+              <div className="col-xs-12 col-sm-5">
+                <h3 className="features-block__title">Improving a slow JSON API endpoint</h3>
+                <p className="features-block__text">You recently noticed a slow HTTP endpoint in production through your favorite monitoring tool. With Bloodbath, you can write a short scenario hitting it in a custom rhtyhm and easily compare the performances of your changes in a pre-production environment.</p>
+              </div>
+              <div className="col-xs-12 first-xs col-sm-5 last-sm col-md-6 col-md-offset-1">
+                <div className="features-block__image">
+                  <img src={SlowJsonImage} />
+                </div>
+              </div>
+            </div>
+
+            <div className="row features-block middle-xs center-xs" key="1">
+              <div className="col-xs-12 col-sm-5 col-sm-offset-1">
+                  <div className="features-block__image">
+                    <img src={SearchInputImage} />
+                  </div>
+              </div>
+              <div className="col-xs-12 col-sm-5 col-md-offset-1">
+                <h3 className="features-block__title">Battletesting the performances of your search input</h3>
+                <p className="features-block__text">You got a search input on your application and want to check if it'll be slow in some cases. Simply hit it in a specific timeframe with Bloodbath and feed it a set of random text for each iteration.</p>
+              </div>
+            </div>
+
+            <div className="row features-block middle-xs center-xs" key="0">
+              <div className="col-xs-12 col-sm-5">
+                <h3 className="features-block__title">Spot badly written SQL queries</h3>
+                <p className="features-block__text">You've recently noticed one of your SQL queries is really slow in production. In a specific timeframe, you can add new records while querying the table to get close to this real-life scenario to see what to improve directly in pre-production or locally.</p>
+              </div>
+              <div className="col-xs-12 first-xs col-sm-5 last-sm col-md-6 col-md-offset-1">
+                <div className="features-block__image">
+                  <img src={BadSQLImage} />
+                </div>
+              </div>
+            </div>
+
+
+
+            <div className="row features-block middle-xs center-xs" key="1">
+              <div className="col-xs-12 col-sm-5 col-sm-offset-1">
+                  <div className="features-block__image">
+                    <img src={GraphQLImage} />
+                  </div>
+              </div>
+              <div className="col-xs-12 col-sm-5 col-md-offset-1">
+                <h3 className="features-block__title">Test out scalability of a complex GraphQL query</h3>
+                <p className="features-block__text">N+1 are the nightmare of people using GraphQL, and it's really hard to compare performance changes before production. Thanks to Bloodbath, you can hit GraphQL queries with random data and see the obvious performance differences with your code changes.</p>
+              </div>
+            </div>
+
+            <div className="row features-block middle-xs center-xs" key="0">
+              <div className="col-xs-12 col-sm-5">
+                <h3 className="features-block__title">Ensure balance in-between micro-services</h3>
+                <p className="features-block__text">You write up complex scenarios with Bloodbath, involving tenth of micro-services or more at the same time to see which one experience scalability issues first. Write some code in a few minutes and see how it goes.</p>
+              </div>
+              <div className="col-xs-12 first-xs col-sm-5 last-sm col-md-6 col-md-offset-1">
+                <div className="features-block__image">
+                <img src={MicroServicesImage} />
+                </div>
+              </div>
+            </div>
+
+            </div>
+          </div>
+        </div>
+
         {/* Features */}
         <div className="container-fluid">
           <div className="row center-xs features" id="features">
@@ -314,7 +408,7 @@ const IndexPage = ({ data, pageContext }) => {
               <div className="row">
                 <div className="col-xs-12">
                   <h2 className="features__punchline">
-                    Made by developers, for developers
+                    Our developer first approach
                   </h2>
                 </div>
               </div>

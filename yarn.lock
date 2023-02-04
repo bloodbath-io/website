@@ -5148,7 +5148,7 @@ gatsby-worker@^2.5.0:
 
 gatsby@^5.5.0:
   version "5.5.0"
-  resolved "https://registry.npmjs.org/gatsby/-/gatsby-5.5.0.tgz"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-5.5.0.tgz#563d19320b9cce6a4f8d0f4894bd3c48f7f7a652"
   integrity sha512-sSdLS80riRk+8arSO4QVY3uz4Di0hVkEudtrraKRhQCYE3LEzK8be0IVsoQclvZ6x8e1ep4AZa6TmRq0QVDqPA==
   dependencies:
     "@babel/code-frame" "^7.18.6"
