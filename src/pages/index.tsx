@@ -338,7 +338,7 @@ const IndexPage = ({ data, pageContext }) => {
             <div className="row features-block middle-xs center-xs" key="0">
               <div className="col-xs-12 col-sm-5">
                 <h3 className="features-block__title">Improving a slow JSON API endpoint</h3>
-                <p className="features-block__text">You recently noticed a slow HTTP endpoint in production through your favorite monitoring tool. With Bloodbath, you can write a short scenario hitting it in a custom rhtyhm and easily compare the performances of your changes in a pre-production environment.</p>
+                <p className="features-block__text">You recently noticed a slow HTTP endpoint in production through your favorite monitoring tool. With Bloodbath, you can write a short scenario hitting it in a custom rhythm and easily compare the performances of your changes in a pre-production environment.</p>
               </div>
               <div className="col-xs-12 first-xs col-sm-5 last-sm col-md-6 col-md-offset-1">
                 <div className="features-block__image">
