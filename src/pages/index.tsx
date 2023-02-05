@@ -17,6 +17,7 @@ import AccessibilityImage from "../images/accessibility.svg"
 import ScalabilityImage from "../images/scalability.svg"
 import AnalyticsImage from "../images/analytics.svg"
 import PrivacyImage from "../images/privacy.svg"
+import FreeAssistanceImage from "../images/free-assistance.svg"
 
 import SlowJsonImage from "../images/slow-json-image.svg"
 import SearchInputImage from "../images/search-input-image.svg"
@@ -90,6 +91,14 @@ const allFeatures = [
     description: "We digest data for you so you don't have to worry about this part. You'll understand the event flow right away just by reading our analysis.",
     image: {
       url: AnalyticsImage
+    },
+    extraContent: () => {}
+  },
+  {
+    title: 'Free assistance',
+    description: "We are ready to assist you if you struggle in writing your first scenarios. Your can schedule a call with our technical support and we'll help with the code itself.",
+    image: {
+      url: FreeAssistanceImage
     },
     extraContent: () => {}
   },
