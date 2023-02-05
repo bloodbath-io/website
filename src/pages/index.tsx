@@ -317,7 +317,7 @@ const IndexPage = ({ data, pageContext }) => {
               </div>
               <div className="row">
                 <div className="col-xs-12">
-                  <div className="introduction__image">
+                  <div className="introduction__image +more-than-xs">
                     <img src={IntroductionImage} />
                   </div>
                 </div>
