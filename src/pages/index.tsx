@@ -104,7 +104,7 @@ const allFeatures = [
   },
   {
     title: 'We take privacy seriously',
-    description: "Storing endpoint responses could be a slippery road in terms of privacy. Our events-related data are purged after one week so you don't have to worry about that.",
+    description: "Storing endpoint responses could be a slippery road in terms of privacy. Our events-related data are purged after one week so you don't have to worry about that. You can have opt for no retention at all.",
     image: {
       url: PrivacyImage
     },
