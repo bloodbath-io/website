@@ -79,8 +79,8 @@ const allFeatures = [
     extraContent: () => {}
   },
   {
-    title: 'Scales to your needs',
-    description: "Scale up your tests without worrying by using the scheduler as intensively as you need. We guarantee it'll be on time, every time. We're very serious about SLOs.",
+    title: 'Scale to your needs',
+    description: "Add volume to your tests without worrying by using the scheduler as intensively as you need. We guarantee it'll be on time, every time. We're very serious about SLOs.",
     image: {
       url: ScalabilityImage
     },
@@ -104,7 +104,7 @@ const allFeatures = [
   },
   {
     title: 'We take privacy seriously',
-    description: "Storing endpoint responses could be a slippery road in terms of privacy. Our events-related data are purged after one week so you don't have to worry about that. You can have opt for no retention at all.",
+    description: "Storing endpoint responses could be a slippery road in terms of privacy. Our events-related data are purged after one day so you don't have to worry about that. You can have opt for no retention at all.",
     image: {
       url: PrivacyImage
     },
