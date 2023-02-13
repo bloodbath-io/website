@@ -25,59 +25,16 @@ import BadSQLImage from "../images/bad-sql-image.svg"
 import MicroServicesImage from "../images/micro-services-image.svg"
 import GraphQLImage from "../images/graphql-image.svg"
 
-import RubySample from "../images/ruby-sample.svg"
-import PythonSample from "../images/python-sample.svg"
-import NodeSample from "../images/node-sample.svg"
+import RubySample from "../images/samples/ruby-sample.svg"
+import PythonSample from "../images/samples/python-sample.svg"
+import NodeSample from "../images/samples/node-sample.svg"
 
 import Layout from "../components/layout"
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css' // TODO: replace that by my own css
 
-const codeSamples = (index) => {
-  return (
-    <Tabs className="tabs">
-    <TabPanel className="tabs__panel">
-      <div className="tabs__innerpanel">
-        <a href="https://github.com/bloodbath-io/bloodbath-ruby" target="_blank">
-          <img src={RubySample} />
-        </a>
-      </div>
-    </TabPanel>
-    <TabPanel className="tabs__panel">
-      <div className="tabs__innerpanel">
-        <a href="https://github.com/bloodbath-io/bloodbath-python" target="_blank">
-          <img src={PythonSample} />
-        </a>
-      </div>
-    </TabPanel>
-    <TabPanel className="tabs__panel">
-      <div className="tabs__innerpanel">
-        <a href="https://github.com/bloodbath-io/bloodbath-node" target="_blank">
-          <img src={NodeSample} />
-        </a>
-      </div>
-    </TabPanel>
-    <TabList>
-      <Tab>Ruby</Tab>
-      <Tab>Python</Tab>
-      <Tab>Node</Tab>
-    </TabList>
-
-  </Tabs>
-  )
-}
-
 const allFeatures = [
-  {
-    title: 'Easy to code',
-    description: "Nothing to install, fast sign-up and super simple interface. We have a coders first approach. You can access our APIs in a few clicks and start coding your scenarios. We've also developed several libraries to make it even easier for you to integrate.",
-    content: codeSamples,
-    // image: {
-    //   url: AccessibilityImage
-    // },
-    extraContent: () => {}
-  },
   {
     title: 'Scale to your needs',
     description: "Add volume to your tests without worrying by using the scheduler as intensively as you need. We guarantee it'll be on time, every time. We're very serious about SLOs.",
@@ -422,9 +379,54 @@ const IndexPage = ({ data, pageContext }) => {
                 </div>
               </div>
 
+
+              <div className="row features-block middle-xs center-xs">
+        <div className="col-xs-12 col-md-10">
+          <h3 className="features-block__title">Easy to code</h3>
+          <p className="features-block__text">Nothing to install, fast sign-up and super simple interface. We have a coders first approach. You can access our APIs in a few clicks and start coding your scenarios. We've also developed several libraries to make it even easier for you to integrate.
+          <br /><a href="https://github.com/bloodbath-io/" target="_blank" class="link">Please check out our libraries on Github</a></p>
+        </div>
+        <div className="col-xs-12 first-xs col-sm-11 col-lg-10 last-sm">
+          <div className="features-block__image">
+
+            <Tabs className="tabs">
+              <TabPanel className="tabs__panel">
+                <div className="tabs__innerpanel">
+                  <a href="https://github.com/bloodbath-io/bloodbath-ruby" target="_blank">
+                    <img src={RubySample} />
+                  </a>
+                </div>
+              </TabPanel>
+              <TabPanel className="tabs__panel">
+                <div className="tabs__innerpanel">
+                  <a href="https://github.com/bloodbath-io/bloodbath-python" target="_blank">
+                    <img src={PythonSample} />
+                  </a>
+                </div>
+              </TabPanel>
+              <TabPanel className="tabs__panel">
+                <div className="tabs__innerpanel">
+                  <a href="https://github.com/bloodbath-io/bloodbath-node" target="_blank">
+                    <img src={NodeSample} />
+                  </a>
+                </div>
+              </TabPanel>
+              <TabList>
+                <Tab>Ruby</Tab>
+                <Tab>Python</Tab>
+                <Tab>Node</Tab>
+              </TabList>
+
+            </Tabs>
+
+          </div>
+        </div>
+
+      </div>
+
               {/* Features list */}
               {allFeatures.map((node, index) => (
-                featureBlock(node, index)
+                featureBlock(node, index+1)
               ))}
 
             </div>
